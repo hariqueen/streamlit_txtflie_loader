@@ -16,11 +16,11 @@ import tempfile
 import os
 
 # 제목
-st.title("chat_txt")
+st.title("txt파일을 업로드 해보세요.")
 st.write("---")
 
 # 파일 업로드
-uploaded_file = st.file_uploader("Choose a file")
+uploaded_file = st.file_uploader("텍스트 파일을 올려주세요!", type=['txt'])
 st.write("---")
 
 def pdf_to_document(uploaded_file):
