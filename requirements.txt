@@ -3,6 +3,6 @@ openai
 pypdf
 chromadb
 tiktoken
-python-dotenv
+dotenv
 tempfile
 os
