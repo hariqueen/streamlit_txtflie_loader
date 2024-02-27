@@ -3,5 +3,4 @@ openai
 pypdf
 chromadb
 tiktoken
-tempfile
-os
+pysqlite3-binary
