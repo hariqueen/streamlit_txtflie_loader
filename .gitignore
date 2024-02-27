@@ -1,5 +1,6 @@
 # dotenv envirionment variables file
 .env
+.devcontainer
 
 # cache & etc
 *__pycache__/
