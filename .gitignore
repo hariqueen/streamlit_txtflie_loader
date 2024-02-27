@@ -1,0 +1,9 @@
+# dotenv envirionment variables file
+.env
+
+# cache & etc
+*__pycache__/
+
+# test files
+*.txt
+*.pdf
