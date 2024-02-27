@@ -11,8 +11,6 @@ from langchain_openai import ChatOpenAI
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.chat_models import ChatOpenAI
 import streamlit as st
-import pandas as pd
-from io import StringIO
 import tempfile
 import os
 
