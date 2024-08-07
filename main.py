@@ -15,6 +15,7 @@ openai_api_key = os.getenv("OPENAI_API_KEY")
 if not openai_api_key:
     st.error("OPENAI_API_KEY 환경 변수가 설정되지 않았습니다.")
 else:
+    st.write(f"OpenAI API Key: {openai_api_key}")  # 디버깅을 위해 API 키 출력 (보안을 위해 실제 사용 시 제거)
     openai.api_key = openai_api_key
 
     # 제목
@@ -34,13 +35,13 @@ else:
         pages = loader.load_and_split()
         return pages
 
-    # 업로된 후 동작
+    # 업로드된 후 동작
     if uploaded_file is not None:
         pages = pdf_to_document(uploaded_file)
 
         # Split
         text_splitter = RecursiveCharacterTextSplitter(
-            chunk_size=300, # 300글자 단위 정도
+            chunk_size=300,  # 300글자 단위 정도
             chunk_overlap=20,
             length_function=len,
             is_separator_regex=False,
@@ -67,3 +68,4 @@ else:
                     st.write(result["result"])
                 except openai.error.OpenAIError as e:
                     st.error(f"OpenAI API 요청 실패: {e}")
+                    st.write(f"Error details: {e}")
