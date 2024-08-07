@@ -1,6 +1,6 @@
 langchain
-langchain_openai
-openai
+langchain-openai==0.0.2.post1
+openai>=1.6.1,<2.0.0
 pypdf
 chromadb
 tiktoken
